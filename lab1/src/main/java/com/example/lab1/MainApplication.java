@@ -13,46 +13,49 @@ public class MainApplication extends Application {
     public void start(Stage primaryStage) throws IOException {
         Group root = new Group();
         Scene scene = new Scene(root, 600, 400);
-        scene.setFill(Color.rgb(0, 128, 255));
+        scene.setFill(Color.rgb(0, 0, 0));
 
-        Rectangle rectangle = new Rectangle(130,50,230,240);
-        rectangle.setFill(Color.WHITE);
+        Circle blueCircle = new Circle(300,180,90);
+        blueCircle.setFill(Color.BLUE);
 
-        Polygon triangle = new Polygon(
-                300.0, 115.0,
-                280.0, 330.0,
-                550.0, 315.0
-        );
-        triangle.setFill(Color.rgb(192, 192, 192));
+        Circle blueInner = new Circle(300,180,75);
+        blueInner.setFill(null);
+        blueInner.setStrokeWidth(1);
+        blueInner.setStrokeType(StrokeType.INSIDE);
+        blueInner.setStroke(Color.BLACK);
 
-        Polygon polygon = new Polygon(
-                50.0, 150.0,
-                265.0, 160.0,
-                150.0, 350.0,
-                25.0, 300.0
-        );
-        polygon.setFill(Color.rgb(4, 255, 128));
+        Circle redCircle = new Circle(300,180,60);
+        redCircle.setFill(Color.RED);
 
-        Polyline polyline = new Polyline(
-                105.0, 70.0,
-                105.0, 20.0,
-                380.0, 20.0,
-                380.0, 70.0,
-                370.0, 70.0,
-                370.0, 30.0,
-                115.0, 30.0,
-                115.0, 70.0
-        );
-        polyline.setFill(Color.rgb(254, 255, 0));
-        polyline.setStroke(Color.rgb(254, 255, 0));
+        Circle redInner = new Circle(300,180,45);
+        redInner.setFill(null);
+        redInner.setStrokeWidth(1);
+        redInner.setStrokeType(StrokeType.INSIDE);
+        redInner.setStroke(Color.BLACK);
+
+        Circle yellowCircle = new Circle(300,180,30);
+        yellowCircle.setFill(Color.YELLOW);
+
+        Circle yellowInner = new Circle(300,180,15);
+        yellowInner.setFill(null);
+        yellowInner.setStrokeWidth(1);
+        yellowInner.setStrokeType(StrokeType.INSIDE);
+        yellowInner.setStroke(Color.BLACK);
+
+        Line horizontalXLine = new Line(295, 180, 305, 180);
+        Line verticalXLine = new Line(300, 175, 300, 185);
 
         root.getChildren().addAll(
-                rectangle,
-                triangle,
-                polygon,
-                polyline
+                blueCircle,
+                blueInner,
+                redCircle,
+                redInner,
+                yellowCircle,
+                yellowInner,
+                horizontalXLine,
+                verticalXLine
         );
-        primaryStage.setTitle("Lab1");
+        primaryStage.setTitle("lab 1");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
