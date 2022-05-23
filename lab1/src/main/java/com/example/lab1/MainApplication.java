@@ -1,5 +1,4 @@
 package com.example.lab1;
-
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
